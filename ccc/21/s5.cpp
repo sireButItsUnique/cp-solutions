@@ -1,3 +1,5 @@
+// partial points
+
 #include <bits/stdc++.h>
 #define pii pair<int, int>
 #define ll long long
