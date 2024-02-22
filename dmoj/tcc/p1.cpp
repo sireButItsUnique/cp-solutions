@@ -28,14 +28,35 @@ public:
 	}
 };
 
+int n;
+string s;
+queue<int> no;
+int cnt = 0;
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
 	// get input
+    cin >> n >> s;
+    for (int i = 0; i < n; i++) {
+        if (s[i] == 'N') {
+            no.push(i + 1);
+        } else {
+            cnt++;
+        }
+    }
 
 	// return res
-	ll res;
+	string res = "YES";
+    while (cnt <= n/2) {
+        if (no.front() > cnt) {
+            res = "NO";
+            break;
+        }
+        no.pop();
+        cnt++;
+    }
+
 	cout << fixed << res << endl;
 	return 0;
 }
