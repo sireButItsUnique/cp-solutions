@@ -37,7 +37,7 @@ int calc(vector<vector<int>> board, int ply) {
 			}
 		}
 		if (bfs.front().first < ply && !visited.count(shift)) {
-			// visited.insert(shift);
+			visited.insert(shift);
 			bfs.push({bfs.front().first + 1, shift});
 		}
 		// down
@@ -54,7 +54,7 @@ int calc(vector<vector<int>> board, int ply) {
 			}
 		}
 		if (bfs.front().first < ply && !visited.count(shift)) {
-			// visited.insert(shift);
+			visited.insert(shift);
 			bfs.push({bfs.front().first + 1, shift});
 		}
 
@@ -72,7 +72,7 @@ int calc(vector<vector<int>> board, int ply) {
 			}
 		}
 		if (bfs.front().first < ply && !visited.count(shift)) {
-			// visited.insert(shift);
+			visited.insert(shift);
 			bfs.push({bfs.front().first + 1, shift});
 		}
 
@@ -90,7 +90,7 @@ int calc(vector<vector<int>> board, int ply) {
 			}
 		}
 		if (bfs.front().first < ply && !visited.count(shift)) {
-			// visited.insert(shift);
+			visited.insert(shift);
 			bfs.push({bfs.front().first + 1, shift});
 		}
 
